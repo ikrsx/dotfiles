@@ -1,0 +1,181 @@
+// Input device configuration
+input {
+    keyboard {
+        numlock
+        xkb {
+            layout "gb,us"
+        }
+    }
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+    }
+}
+
+// Windows positioning and size
+layout {
+    gaps 10
+    center-focused-column "never"
+    default-column-width { proportion 0.5; }
+    focus-ring {
+        width 4
+        active-color "#cba6f7"
+        inactive-color "#1e1e2e"
+    }
+}
+
+// Window rules
+window-rule {
+    // Open the Firefox picture-in-picture player as floating by default.
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule{
+    // Enable rounded corners for all windows.
+    geometry-corner-radius 15
+    clip-to-geometry true
+}
+
+binds {
+    // Shows a list of important hotkeys.
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    // Binds for running programs
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel -a bottom-left"; }
+    Mod+E hotkey-overlay-title="Run an Application: nautilus" { spawn "nautilus"; }
+    Mod+B hotkey-overlay-title="Run an Application: librewolf" { spawn "librewolf"; }
+    Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+
+    // Volume keys mappings for PipeWire & WirePlumber.
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0 && notify-send $(wpctl get-volume @DEFAULT_AUDIO_SINK@)"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1- && notify-send $(wpctl get-volume @DEFAULT_AUDIO_SINK@)"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && && notify-send $(wpctl get-volume @DEFAULT_AUDIO_SINK@)"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    // Media keys mapping using playerctl.
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+    // Brightness key mappings for brightnessctl.
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +10% && notify-send Brightness $(brightnessctl g)"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 10%- && notify-send Brightness $(brightnessctl g)"; }
+
+    // Open/close the Overview: a zoomed-out view of workspaces and windows.
+    Mod+O repeat=false { toggle-overview; }
+    Mod+Q repeat=false { close-window; }
+
+    // Window focus adjustments
+    Mod+Left  { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right { focus-column-right; }
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Down  { move-window-down; }
+    Mod+Shift+Up    { move-window-up; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+    Mod+Shift+Home { move-column-to-first; }
+    Mod+Shift+End  { move-column-to-last; }
+
+    // Multi-monitor adjustments
+    Mod+Ctrl+Left  { focus-monitor-left; }
+    Mod+Ctrl+Down  { focus-monitor-down; }
+    Mod+Ctrl+Up    { focus-monitor-up; }
+    Mod+Ctrl+Right { focus-monitor-right; }
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+    // Worspace movements
+    Mod+K              { focus-workspace-up; }
+    Mod+J              { focus-workspace-down; }
+    Mod+Shift+J         { move-column-to-workspace-down; }
+    Mod+Shift+K         { move-column-to-workspace-up; }
+
+    // Bind mouse wheel scroll ticks.
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    // Indexed workspace
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+
+    // Window column width adjustments
+    Mod+D { switch-preset-column-width; }
+    Mod+Shift+D { switch-preset-window-height; }
+    Mod+Ctrl+D { reset-window-height; }
+
+    //Window maximization
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    // Finer width & height adjustments.
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    // Move the focused window between the floating and the tiling layout.
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Screenshot
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // The quit action will show a confirmation dialog to avoid accidental exits.
+    Ctrl+Alt+Delete { spawn-sh "sh ~/.config/fuzzel/scripts/powermenu.sh"; }
+
+    // Powers off the monitors. To turn them back on, do any input like
+    Mod+Shift+P { power-off-monitors; }
+}
+
+// Spawn processes at startup.
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-at-startup "hyprpaper"
+spawn-sh-at-startup "swayidle -w timeout 900 'hyprlock' timeout 900 'systemctl suspend'"
+
+// Ask the clients to omit their client-side decorations if possible.
+prefer-no-csd
+
+// Change the path where screenshots are saved.
+screenshot-path "~/workstation/gallery/screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
