@@ -13,7 +13,7 @@ notify-send "Gathering Wi-Fi Networks...."
 readonly ssid_list=$(nmcli -f SSID dev wifi | grep -v -E "SSID|--" | awk -v icon="  " '{print icon $0}') 
 
 # get ssid from the fuzzel
-readonly ssid=$(echo -e "$toggle\n$ssid_list" | fuzzel --dmenu --minimal-lines --hide-prompt -a bottom-right)
+ssid=$(echo -e "$toggle\n$ssid_list" | fuzzel --dmenu --minimal-lines --hide-prompt -a bottom-right)
 
 # exit if fuzzel is escaped or ssid's value is null
 if [[ -z "$ssid" ]]; then
@@ -23,6 +23,8 @@ elif [[ "$ssid" == "󰖪  Disable Wi-Fi" ]]; then
 elif [[ "$ssid" == "  Enable Wi-Fi" ]]; then
  nmcli radio wifi on 
 else
+  # get ssid name only not icon.
+  ssid=$(echo -e "$ssid" | awk '{print $2}')
   # get password using fuzzel
   passwd=$(fuzzel --prompt-only "Password: " --password --dmenu) 
 
