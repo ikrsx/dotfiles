@@ -1,0 +1,80 @@
+@import "themes/catppuccin.css";
+
+/* global styling */
+* {
+  color: @text;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+/* waybar styling */
+#waybar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* common styling for every modules */
+#workspaces, 
+#clock,
+#battery,
+#bluetooth,
+#network,
+#pulseaudio,
+#custom-launcher,
+#custom-logout {
+  background-color: @base;
+  border-radius: 15px;
+}
+
+/* setting vertical padding for some modules */
+#clock,
+#battery,
+#pulseaudio,
+#network {
+  padding: 0px 10px;
+}
+
+/* setting vertical padding & fontsize for some modules */
+#bluetooth,
+#custom-launcher,
+#custom-logout {
+  font-size: 1.25em;
+  padding: 0 15px;
+}
+
+/* setting disabled color for some modules */
+#bluetooth.disabled, 
+#network.disabled,
+#network.disconnected {
+  color: @subtext0;
+}
+
+/* custom launcher module styling */
+#custom-launcher:hover {
+  color: @peach;
+}
+
+#custom-launcher {
+  color: @yellow;
+}
+
+/* workspaces button styling */
+#workspaces button {
+  padding: 6px;
+  font-size: 1.20em;
+}
+
+/* bluetooth module styling */
+#bluetooth:hover,
+#bluetooth.disabled:hover,
+#bluetooth.connected {
+  color: @sapphire;
+}
+
+/* custom logout module styling */
+#custom-logout:hover {
+  font-weight: bold;
+  color: @red;
+}
+
+#custom-logout {
+  color: @peach;
+}

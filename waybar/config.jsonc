@@ -1,0 +1,103 @@
+{
+  "layer" : "top",
+  "position" : "bottom",
+  "margin" : 6, "spacing" : 4,
+  "modules-left": ["custom/launcher", "niri/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["battery", "bluetooth", "network", "pulseaudio", "custom/logout"],
+
+  "custom/launcher": {
+    "format": " 󱓞 ",
+    "on-click": "fuzzel -a bottom-left",
+    "tooltip": false,
+  },
+
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+    "active": "",
+    "default": "",
+    },
+  },
+
+  "clock": {
+    "interval": 60,
+    "format": " {:%b %d %H:%M} ",
+    "max-length": 25,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "months":     "<span><b>{}</b></span>",
+        "today":      "<span color='#cba6f7'><b>{}</b></span>"
+      }
+    },
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "max-length": 25,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} ",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format" : "{capacity}%\n{timeTo}",
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "tooltip-format": "{controller_alias}",
+    "tooltip-format-connected": "{controller_alias}\nConnected Devices:\n{device_enumerate} ({device_battery_percentage}%)",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click" : "blueman-manager",
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": " ",
+    "format-disabled": " ",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname}",
+    "tooltip-format-disconnected": "  Not Connected",
+    "max-length": 50,
+    "on-click" : "sh ~/.config/fuzzel/scripts/wifi-menu.sh",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} ",
+    "tooltip-format" : "{volume}%\n{desc}",
+    "format-bluetooth": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "  ",
+      "hands-free": " 󰥰 ",
+      "headset": "  ",
+      "phone": "  ",
+      "phone-muted": "  ",
+      "portable": "  ",
+      "car": "  ",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+
+  "custom/logout": {
+    "format": "󰿅",
+    "on-click" : "sh ~/.config/fuzzel/scripts/powermenu.sh",
+    "tooltip": false,
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+  }
+}
