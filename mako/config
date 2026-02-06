@@ -1,0 +1,21 @@
+# Mako configuration file.
+# Author: Krishal
+# Github: github.com/ikrsx
+
+# Font for the notification.
+font=JetBrainsMono Nerd Font 11
+
+# Timeout for notification.
+default-timeout=5000
+
+# Set border radius for notification.
+border-radius=12
+
+# Catppuccin colors for notification.
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#cba6f7
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387

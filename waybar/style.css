@@ -1,0 +1,105 @@
+/*
+ * Style configuration for waybar.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Useage: use this file to configure style 
+ * for all modules of waybar & import a colorscheme
+ * from 'colors' directory.
+*/
+
+/* Import the colors. */
+@import "colors/catppuccin.css";
+
+/* Global Configurations for every module */
+* {
+    margin: 0;
+    padding: 0;
+    color: @text;
+    background: transparent;
+    font-family: JetBrainsMono Nerd Font;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 12px;
+    border: none;
+}
+
+tooltip {
+    background: @base;
+}
+
+#custom-launcher,
+#workspaces,
+.modules-center,
+.modules-right {
+    background: @base;
+    padding: 5px 10px;
+    margin: 5px 5px 0 5px;
+}
+
+#battery,
+#pulseaudio,
+#bluetooth,
+#custom-sessionmenu,
+#custom-launcher {
+    font-size: 18px;
+}
+
+#bluetooth.off,
+#network.disconnected {
+    color: @grey;
+}
+
+/* Launcher module style */
+#custom-launcher:hover {
+    color: @orange;
+}
+
+/* Workspace button style */
+#workspaces button {
+    padding: 0 10px;
+}
+
+/* Right module group style */
+.modules-right {
+    padding: 0 0 0 10px;
+}
+
+#battery,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-sessionmenu {
+    margin: 0 15px;
+}
+
+/* Battery style */
+#battery {
+    padding: 0 9px 0 0;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+/* Bluetooth module style */
+#bluetooth:hover,
+#bluetooth.connected {
+    color: @blue;
+}
+
+/* Sessionmenu module style */
+#custom-session {
+    padding: 0 8px 0 0;
+}
+
+#custom-sessionmenu:hover {
+    color: @red;
+}

@@ -1,0 +1,10 @@
+# Configuration for Ghostty.
+# Author: Krishal
+# Github: github.com/ikrsx
+
+# Font settings.
+font-family = JetBrainsMono Nerd Font
+font-size = 15
+
+# Theme
+theme = Catppuccin Mocha

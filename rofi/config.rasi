@@ -1,0 +1,32 @@
+/*
+ * Main rofi configuration for menu system.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Useage: use this file to configure global 
+ * settings for every modes & import a colorscheme
+ * from 'colors' directory.
+*/
+
+// import the colorscheme.
+@theme "colors/catppuccin.rasi"
+
+// Global configuration for every mode.
+configuration {
+    font: 		"JetBrainsMono Nerd Font 11";
+    dpi: 		125;
+}
+
+// Set default value for every modes.
+* {
+    background-color: 		@base;
+    text-color: 		@text;
+    spacing: 			0;
+    margin: 			0;
+    padding: 			0;
+}
+
+// Configure rofi window.
+window {
+   border: 			0;
+   border-radius: 		12px;
+}

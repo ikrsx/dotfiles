@@ -1,0 +1,17 @@
+/*
+ * Custom catppuccin colors configuration for rofi.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Credit: github.com/catppuccin
+ * Useage: use this file to create custom colorscheme 
+ * for specific theme.
+*/
+
+* {
+   accent:         	#cba6f7;
+   accent-alt:         	#cba6f799;
+   black:          	#11111b;
+   text:           	#cdd6f4;
+   base:           	#1e1e2e;
+   black-alt:      	#6c708624;
+}

@@ -1,0 +1,41 @@
+/*
+ * Network configuration using rofi.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Useage: use this file to configure the networkmenu 
+ * & import config.rasi to use global settings & 
+ * colorschemes. 
+*/
+
+// Import the main configuration.
+@import "config.rasi"
+
+// Window configuration for menu.
+window {
+   height: 		150px;
+   width: 		290px;
+   location:		northeast;
+   margin:		10px;
+}
+
+// Disable input bar.
+inputbar {
+   enabled:		false;
+}
+
+// Configure elements in the list view.
+element {
+   padding: 		15px;
+   margin: 		6px 6px 0 6px;
+   border-radius: 	12px;
+}
+
+// Configure element text in the list view.
+element-text {
+    background-color: 	transparent;
+}
+
+// Configure element text in the list view when selected.
+element selected  normal {
+    background-color: 	@accent-alt;
+}

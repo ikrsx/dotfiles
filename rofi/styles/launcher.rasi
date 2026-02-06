@@ -1,0 +1,60 @@
+/*
+ * Application launcher configuration using rofi.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Useage: use this file to configure the application 
+ * launcher & import config.rasi to use global settings
+ * & colorschemes. 
+*/
+
+// Import the main configuration.
+@import "config.rasi"
+
+// Launcher specific configuration.
+configuration {
+    show-icons: 	true;
+    icon-theme: 	"Adwaita";
+}
+
+// Window configuration for launcher.
+window {
+   height: 		400px;
+   width: 		500px;
+}
+
+// Show only entry input bar.
+inputbar {
+   children: 		[entry];
+}
+
+// Configure entry box of input bar.
+entry {
+   background-color: 	@accent;
+   text-color: 		@black;
+   placeholder: 	"Type To Search...";
+   padding: 		15px;
+}
+
+// Configure elements in the list view.
+element {
+   spacing: 		15px;
+   padding: 		15px;
+   margin: 		6px 6px 0 6px;
+   border-radius: 	12px;
+}
+
+// Configure element icons in the list view.
+element-icon {
+    size: 		32px;
+    background-color: 	transparent;
+}
+
+// Configure element text in the list view.
+element-text {
+    background-color: 	transparent;
+}
+
+// Configure element text in the list view when selected.
+element selected  normal {
+    background-color: 	@black-alt;
+}
