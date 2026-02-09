@@ -1,0 +1,18 @@
+# Alacritty configuration for terminal emulator.
+# Author: Krishal
+# Github: github.com/ikrsx
+# Useage: import themes from 'themes' direcorty
+# and configure the settings for alacritty.
+
+# Import your themes from 'themes' direcorty.
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+# Apply following font settings to alacritty.
+[font]
+normal = {
+  family = "JetBrainsMono Nerd Font",
+}
+size = 15
