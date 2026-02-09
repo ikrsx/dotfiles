@@ -57,6 +57,7 @@ layout {
 }
 
 /**** Spawn processes at startup. ****/
+spawn-sh-at-startup "sh ~/.config/niri/scripts/idle_manager.sh"
 spawn-at-startup "waybar"
 spawn-at-startup "hyprpaper"
 
