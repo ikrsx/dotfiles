@@ -11,7 +11,7 @@ OPTION_SELECTED=$(echo -e "  Wi-fi Settings\n󰐻 Network Settings" | rofi -d
 
 # Case for the selected option.
 case $OPTION_SELECTED in
-	"  Wi-fi Settings") ghostty -e impala;;
-	"󰐻 Network Settings") ghostty -e nmtui;;
+	"  Wi-fi Settings") alacritty --command impala;;
+	"󰐻 Network Settings") alacritty --command nmtui;;
 	*) exit;;
 esac

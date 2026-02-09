@@ -19,7 +19,7 @@ function get_file_icon()
     hypr = " ",
     go = " ",
     dart = " ",
-    bash = " ",
+    sh = " ",
     json = " ",
     toml = " ",
     dosini = " ",
