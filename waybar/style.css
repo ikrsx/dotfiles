@@ -8,7 +8,7 @@
 */
 
 /* Import the colors. */
-@import "colors/catppuccin.css";
+@import "colors/gruvbox.css";
 
 /* Global Configurations for every module */
 * {

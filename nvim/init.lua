@@ -10,6 +10,7 @@
 --- Load Lua Modules  -----
 ---------------------------
 require("lazy_nvim")
+require("theme_config")
 require("language_servers")
 require("keybindings")
 require("autocommands")
@@ -18,16 +19,16 @@ require("statusline")
 ---------------------------
 ----- Visual Setting -----
 ---------------------------
-vim.o.termguicolors = true       -- Enables 24-bit colors.
-vim.cmd.colorscheme "catppuccin" -- Set the colorscheme.
-vim.o.number = true              -- Sets line numbers.
-vim.o.relativenumber = true      -- Sets relative line numbers.
-vim.o.cursorline = true          -- Shows cursor line.
-vim.o.winborder = "rounded"      -- Shows rounded border around pop-up menu.
-vim.o.showmode = false           -- Disables showing current mode in command line.
-vim.o.pumheight = 10             -- Sets the height of the popup menu.
-vim.g.netrw_liststyle = 3        -- Enable tree view for netrw.
-vim.g.netrw_banner = 0           -- Disable the above banner for netrw.
+vim.o.termguicolors = true    -- Enables 24-bit colors.
+vim.cmd.colorscheme "gruvbox" -- Set the colorscheme.
+vim.o.number = true           -- Sets line numbers.
+vim.o.relativenumber = true   -- Sets relative line numbers.
+vim.o.cursorline = true       -- Shows cursor line.
+vim.o.winborder = "rounded"   -- Shows rounded border around pop-up menu.
+vim.o.showmode = false        -- Disables showing current mode in command line.
+vim.o.pumheight = 10          -- Sets the height of the popup menu.
+vim.g.netrw_liststyle = 3     -- Enable tree view for netrw.
+vim.g.netrw_banner = 0        -- Disable the above banner for netrw.
 
 ----------------------------
 ----- Tabsize Settings -----

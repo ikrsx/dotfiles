@@ -8,7 +8,7 @@
 */
 
 // import the colorscheme.
-@theme "colors/catppuccin.rasi"
+@theme "colors/gruvbox.rasi"
 
 // Global configuration for every mode.
 configuration {

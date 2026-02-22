@@ -1,0 +1,18 @@
+/*
+ * Gruvbox colors for waybar.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Credit: github.com/catppuccin
+ * Useage: use this file to create
+ * a colorscheme for waybar.
+*/
+
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color orange #d65d0e;
+@define-color blue #458588;
+@define-color grey #928374;
+@define-color text #fbf1c7;
+@define-color base #1d2021;
+@define-color crust #11111b;

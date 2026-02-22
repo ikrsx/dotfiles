@@ -7,7 +7,8 @@
 # Import your themes from 'themes' direcorty.
 [general]
 import = [
-  "~/.config/alacritty/themes/catppuccin-mocha.toml"
+  # "~/.config/alacritty/themes/catppuccin-mocha.toml"
+  "~/.config/alacritty/themes/gruvbox-darker.toml"
 ]
 
 # Apply following font settings to alacritty.

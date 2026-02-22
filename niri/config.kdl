@@ -50,9 +50,14 @@ layout {
         // How many logical pixels the ring extends out from the windows.
         width 4
 
-        // Catppuiccin colors for rings.
-        active-color "#cba6f7"
+        // Global colors.
         inactive-color "#11111b00"
+
+        // Catppuiccin colors for rings.
+        // active-color "#cba6f7"
+
+        // Gruvbox colors for rings.
+        active-color "#689d6a"
     }
 }
 

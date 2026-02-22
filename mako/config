@@ -12,10 +12,19 @@ default-timeout=5000
 border-radius=12
 
 # Catppuccin colors for notification.
-background-color=#1e1e2e
-text-color=#cdd6f4
-border-color=#cba6f7
-progress-color=over #313244
+# background-color=#1e1e2e
+# text-color=#cdd6f4
+# border-color=#cba6f7
+# progress-color=over #313244
+#
+# [urgency=high]
+# border-color=#fab387
+
+# Gruvbox colors for notification.
+background-color=#1d2021
+text-color=#fbf1c7
+border-color=#689d6a
+progress-color=over #32302f
 
 [urgency=high]
-border-color=#fab387
+border-color=#d65d0e

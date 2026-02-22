@@ -9,7 +9,7 @@
 
 * {
    accent:         	#cba6f7;
-   accent-alt:         	#cba6f799;
+   accent-alt:      #cba6f799;
    black:          	#11111b;
    text:           	#cdd6f4;
    base:           	#1e1e2e;

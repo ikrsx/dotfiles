@@ -1,0 +1,17 @@
+/*
+ * Custom gruvbox colors configuration for rofi.
+ * Author: Krishal
+ * Github: github.com/ikrsx
+ * Credit: github.com/catppuccin
+ * Useage: use this file to create custom colorscheme 
+ * for specific theme.
+*/
+
+* {
+   accent:          #689d6a;
+   accent-alt:      #689d6a99;
+   black:          	#11111b;
+   text:           	#fbf1c7;
+   base:           	#1d2021;
+   black-alt:      	#92827424;
+}

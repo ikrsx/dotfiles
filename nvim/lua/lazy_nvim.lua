@@ -29,6 +29,9 @@ require("lazy").setup({
     -- Catppuccin colorscheme
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
+    -- Gruvbox colorscheme
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+
     -- Blink.cmp
     {
       'saghen/blink.cmp',
