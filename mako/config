@@ -1,0 +1,25 @@
+# Author: Krishal
+# Github: ikrsx
+# Credit: github.com/ikrsx (for themeing)
+# Description: Configuration file for mako notification daemon.
+
+# Set custom font.
+font=JetBrainsMono Nerd Font 11
+
+# Set border radius for notification.
+border-radius=15
+
+# Show icons on the nmarginotification.
+icons=1
+
+# Show notification for 5 seconds (specified in ms).
+default-timeout=5000
+
+# Apply Catppuccin Mocha colors.
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#cba6f7
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387
