@@ -1,0 +1,16 @@
+# Author: Krishal
+# Github: ikrsx
+# Description: Main configuration file for yazi file manager.
+
+# Adjust the overall view of yazi windows.
+[mgr]
+ratio = [0, 2, 4]
+sort_by = "extension"
+sort_sensitive = true
+sort_dir_first = true
+linemode = "mtime"
+show_symlink = false
+
+# Preview settings shown by yazi.
+[preview]
+wrap = "yes"
