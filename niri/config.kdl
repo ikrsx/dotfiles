@@ -59,6 +59,9 @@ layout {
 // Waybar
 spawn-at-startup "waybar"
 
+// Hyprpaper
+spawn-at-startup "hyprpaper"
+
 // Ask the clients to omit their client-side decorations if possible.
 prefer-no-csd
 
