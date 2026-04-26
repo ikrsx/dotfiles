@@ -1,0 +1,93 @@
+// Author: Krishal
+// Github: ikrsx
+// Description: Configuration file for waybar.
+{
+	"layer": "top",
+	"modules-left": ["niri/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["battery", "network", "bluetooth", "pulseaudio"],
+
+	"niri/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+
+	"clock": {
+		"format": "{:%b %d %H:%M}",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode"          : "month",
+			"mode-mon-col"  : 3,
+			"weeks-pos"     : "right",
+			"on-scroll"     : 1,
+			"format": {
+				"months":     "<span color='#b4befe'><b>{}</b></span>",
+				"days":       "<span color='#cdd6f4'>{}</span>",
+				"weeks":      "",
+				"weekdays":   "<span color='#f5c2e7'><b>{}</b></span>",
+				"today":      "<span color='#f38ba8'><b>{}</b></span>"
+			}
+		},
+		"actions":  {
+			"on-click-right": "mode",
+			"on-scroll-up": "tz_up",
+			"on-scroll-down": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	},
+
+	"battery": {
+		"format": "{icon}",
+		"states": {
+			"warning": 25,
+			"critical": 15
+		},
+		"tooltip-format": "  {capacity}%\n  {timeTo}",
+		"format-icons": ["", "", "", "", ""]
+	},
+
+	"network": {
+		"format-wifi": "",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰌙",
+		"format-disabled":"󰫗",
+		"tooltip-format-wifi": "  {essid}({signalStrength}%)\n  {bandwidthDownBytes}\n  {bandwidthUpBytes}",
+		"tooltip-format-ethernet": "󰈀  {ifname}  {bandwidthDownBytes}\n  {bandwidthUpBytes}",
+		"tooltip-format-disconnected": "󰌙 Disconnected",
+		"tooltip-format-disabled": "󰫗 Disabled"
+	},
+
+	"bluetooth": {
+		"format-on": "",
+		"format-off": "󰂲",
+		"format-connected": "󰂱",
+		"format-disabled": "",
+		"format-no-controller": "",
+		"tooltip-format-connected": " {device_alias}",
+		"tooltip-format-enumerate-connected": " {device_alias}"
+	},
+
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-bluetooth": "󰗾",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "󱡏",
+			"headset": "",
+			"phone": "",
+			"phone-muted": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"scroll-step": 1,
+		"tooltip-format": "󰗅 {desc} ({volume}%)",
+		"on-click": "pavucontrol",
+		"ignored-sinks": ["Easy Effects Sink"]
+	}
+}

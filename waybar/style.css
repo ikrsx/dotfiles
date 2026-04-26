@@ -1,0 +1,82 @@
+/* Author: Krishal
+ * Github: ikrsx
+ * Credit: github.com/catppuccin (for theming)
+ * Description: Styling file for waybar.
+ */
+
+/***** Global Styling *****/
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "JetBrainsMono Nerd Font";
+}
+
+window#waybar {
+  font-weight: bold;
+  background: transparent;
+  color: #cdd6f4;
+}
+
+.modules-right {
+  font-size: 15px;
+  padding: 0 6px;
+}
+
+.modules-right,
+#clock,
+#workspaces {
+  background: #1e1e2e;
+  margin: 6px 6px 0 6px;
+  border-radius: 15px;
+}
+
+#clock,
+#battery,
+#network,
+#bluetooth {
+  padding: 6px 10px;
+}
+
+#network.disabled,
+#network.disconnected,
+#bluetooth.off {
+   color: #585b70;
+}
+
+#bluetooth,
+#battery,
+#pulseaudio {
+   font-size: 18px;
+}
+
+/**** Widget Styling ****/
+#workspaces {
+  padding: 0px 10px;
+}
+
+#workspaces button {
+  border: none;
+  border-radius: 100%;
+  color: #cdd6f4;
+  padding: 6px;
+}
+
+#workspaces button:hover {
+  background: transparent;
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical {
+  color: #f38ba8;
+}
+
+#bluetooth.connected {
+   color: #89b4fa;
+}
+
+#pulseaudio {
+   padding: 0 12px 0 10px;
+}
