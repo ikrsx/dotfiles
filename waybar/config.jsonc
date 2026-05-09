@@ -68,7 +68,8 @@
 		"format-disabled": "",
 		"format-no-controller": "",
 		"tooltip-format-connected": " {device_alias}",
-		"tooltip-format-enumerate-connected": " {device_alias}"
+		"tooltip-format-enumerate-connected": " {device_alias}",
+		"on-click": "alacritty --command bluetoothctl"
 	},
 
 	"pulseaudio": {
@@ -87,7 +88,7 @@
 		},
 		"scroll-step": 1,
 		"tooltip-format": "󰗅 {desc} ({volume}%)",
-		"on-click": "pavucontrol",
+		"on-click": "pwvucontrol",
 		"ignored-sinks": ["Easy Effects Sink"]
 	}
 }
