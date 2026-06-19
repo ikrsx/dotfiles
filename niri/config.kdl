@@ -1,0 +1,26 @@
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+        numlock
+    }
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+    }
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d %H-%M-%S.png"
+
+include "dms/alttab.kdl"
+include "dms/binds.kdl"
+include "dms/colors.kdl"
+include "dms/cursor.kdl"
+include "dms/layout.kdl"
+include "dms/outputs.kdl"
+include "dms/windowrules.kdl"
+include "dms/wpblur.kdl"
