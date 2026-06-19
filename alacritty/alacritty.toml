@@ -1,0 +1,7 @@
+[general]
+import = ["~/.config/alacritty/dank-theme.toml"]
+
+# Font settings.
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+size = 15
