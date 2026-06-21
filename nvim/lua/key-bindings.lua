@@ -1,7 +1,3 @@
--- Author: Krishal
--- Github: ikrsx
--- Description: Add new key bindings for the editor.
-
 vim.g.mapleader = ' '      -- Set space bar as leader key.
 vim.g.maplocalleader = ' ' -- Same as the above.
 

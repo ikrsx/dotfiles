@@ -1,7 +1,3 @@
--- Author: Krishal
--- Github: ikrsx
--- Description: Configuration module for basic settings.
-
 --------------------------
 ---   VISUAL STYLING   ---
 --------------------------
