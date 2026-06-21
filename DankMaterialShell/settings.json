@@ -114,12 +114,17 @@
       "width": 50
     },
     {
-      "id": "nightMode",
+      "id": "battery",
       "enabled": true,
       "width": 50
     },
     {
       "id": "darkMode",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "nightMode",
       "enabled": true,
       "width": 50
     }
